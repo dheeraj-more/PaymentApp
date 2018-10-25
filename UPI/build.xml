@@ -1,0 +1,45 @@
+<?xml version="1.0" ?> 
+<project name="UPI" >
+
+	<path id="compile.classpath">
+		<fileset dir="WebContent/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	
+	<target name="init">
+		<mkdir dir="build/classes"/>
+		<mkdir dir="dist" />
+	</target>
+	
+	<target name="compile" depends="init" >
+		<javac destdir="build/classes" debug="true" srcdir="src">
+			<classpath refid="compile.classpath"/>
+		</javac>
+	</target>
+	
+	<target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="../PaymentGateway/WebContent/WEB-INF/lib/PayTM.jar" basedir="build/classes">
+            
+        </jar>
+    </target>
+	
+	<target name="clean">
+		<delete dir="dist" />
+		<delete dir="build" />
+	</target>
+	
+</project>
+
+
+
+
+
+
+
+
+
+
+
+
