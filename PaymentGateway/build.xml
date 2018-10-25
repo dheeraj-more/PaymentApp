@@ -1,5 +1,5 @@
 <?xml version="1.0" ?> 
-<project name="PaymentApp" default="war">
+<project name="PaymentGateway" default="war">
 
 	<path id="compile.classpath">
 		<fileset dir="WebContent/WEB-INF/lib">
